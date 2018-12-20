@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Gamba | </title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- FONT CSS-->
+        <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+        <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cuprum:400,700">
+        <link type="text/css" rel="stylesheet" href="assets/font/font-icon/font-awesome/css/font-awesome.css">
+        <link type="text/css" rel="stylesheet" href="assets/font/font-icon/font-oganic/flaticon.css">
+        <!-- LIBRARY CSS-->
+        <link type="text/css" rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
+        <link type="text/css" rel="stylesheet" href="assets/libs/bootstrap-timepicker/jquery.timepicker.css">
+        <link type="text/css" rel="stylesheet" href="assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css">
+        <link type="text/css" rel="stylesheet" href="assets/libs/animate/animate.css">
+        <link type="text/css" rel="stylesheet" href="assets/libs/slick-slider/slick.css">
+        <link type="text/css" rel="stylesheet" href="assets/libs/slick-slider/slick-theme.css">
+        <link type="text/css" rel="stylesheet" href="assets/libs/custom-scroll/jquery.mCustomScrollbar.min.css">
+        <link type="text/css" rel="stylesheet" href="assets/libs/fancybox/css/jquery.fancybox.css">
+        <link type="text/css" rel="stylesheet" href="assets/libs/fancybox/css/jquery.fancybox-buttons.css">
+        <link type="text/css" rel="stylesheet" href="assets/libs/fancybox/css/jquery.fancybox-thumbs.css">
+        <!-- STYLE CSS-->
+        <link type="text/css" rel="stylesheet" href="assets/css/layout.css">
+        <link type="text/css" rel="stylesheet" href="assets/css/components.css">
+        <link type="text/css" rel="stylesheet" href="assets/css/responsive.css">
+        <link type="text/css" rel="stylesheet" href="#" id="color-skins">
+        <!-- JS change color-->
+        <script src="assets/libs/jquery/jquery-2.2.4.min.js"></script>
+        <script src="assets/libs/cookie/js.cookie.js"></script>
+        <script>
+            if ((Cookies.get('color-skin') != undefined) && (Cookies.get('color-skin') != 'color-1'))
+            {
+                $('#color-skins').attr('href', 'assets/css/custom-color/' + Cookies.get('color-skin') + '.css');
+            }
+            else if ((Cookies.get('color-skin') == undefined) || (Cookies.get('color-skin') == 'color-1'))
+            {
+                $('#color-skins').attr('href', 'assets/css/custom-color/custom-color-1.css');
+            }
+        </script>
+    </head>
+
+    <body>
+        <!--PAGE LOADER-->
+        <div id="loading-page">
+            <div class="loading-wrap gamba-circles">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <!--.numscroller(data-slno='1' data-min='0' data-max='100' data-delay='2' data-increment="1") 0-->
+            </div>
+        </div>
+        <!-- MAIN CONTENT-->
+        <div class="body-wrapper">
+            <!-- MENU MOBILE-->
+            <div class="wrapper-menu-mobile-background"></div>
+            <div class="wrapper-menu-mobile">
+                <div class="mb-social-wrapper">
+                    <div class="mb-socials">
+                        <ul class="list-unstyled list-inline">
+                            <li><a href="#" class="link facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#" class="link twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" class="link pinterest"><i class="fa fa-pinterest-p"></i></a></li>
+                            <li><a href="#" class="link google"><i class="fa fa-google"></i></a></li>
+                            <li><a href="#" class="link instagram"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="mb-button-close"><i class="icons fa fa-times"></i></div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="mb-login-wrapper">
+                    <div class="mb-guest-wrapper">
+                        <div class="mb-avatar">
+                            <div class="mb-avatar-container"><img src="assets/images/more-image/avatar.png" alt="" class="img-responsive" /></div>
+                        </div>
+                        <div class="mb-name"><a href="#" class="link">Sign in</a></div>
+                    </div>
+                </div>
+                <ul class="nav navbar-nav mb-nav">
+                    <li class="dropdown"><a href="index.html" class="main-menu"><span class="text">Home</span></a><span class="icons-dropdown"><i class="fa fa-angle-right"></i></span>
+                        <ul class="mb-menu-dropdown">
+                            <li><a href="index.html" class="sub-menu"><span class="text">Homepage 01</span></a></li>
+                            <li><a href="homepage-2.html" class="sub-menu"><span class="text">Homepage 02</span></a></li>
+                            <li><a href="homepage-3.html" class="sub-menu"><span class="text">Homepage 03</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html" class="main-menu"><span class="text">about</span></a></li>
+                    <li class="dropdown"><a href="shop.html" class="main-menu"><span class="text">Shop</span></a><span class="icons-dropdown"><i class="fa fa-angle-right"></i></span>
+                        <ul class="mb-menu-dropdown">
+                            <li><a href="shop.html" class="sub-menu"><span class="text">Shop Grid</span></a></li>
+                            <li><a href="shop-list.html" class="sub-menu"><span class="text">Shop List</span></a></li>
+                            <li><a href="shop-detail.html" class="sub-menu"><span class="text">Shop Detail</span></a></li>
+                            <li><a href="shopping-cart.html" class="sub-menu"><span class="text">Shopping Cart</span></a></li>
+                            <li><a href="check-out.html" class="sub-menu"><span class="text">Check Out</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="blog.html" class="main-menu"><span class="text">blog</span></a><span class="icons-dropdown"><i class="fa fa-angle-right"></i></span>
+                        <ul class="mb-menu-dropdown">
+                            <li><a href="blog.html" class="sub-menu"><span class="text">blog Grid</span></a></li>
+                            <li><a href="blog-list.html" class="sub-menu"><span class="text">blog list</span></a></li>
+                            <li><a href="blog-masonry.html" class="sub-menu"><span class="text">blog masonry</span></a></li>
+                            <li><a href="blog-left-sidebar.html" class="sub-menu"><span class="text">blog sidebar left</span></a></li>
+                            <li class="dropdown-2"><a href="blog-detail.html" class="sub-menu"><span class="text">blog detail</span></a><span class="icons-dropdown"><i class="fa fa-angle-right"></i></span>
+                                <ul class="mb-menu-dropdown">
+                                    <li><a href="blog-detail-2.html" class="sub-menu"><span class="text">blog detail sidebar left</span></a></li>
+                                    <li><a href="blog-detail.html" class="sub-menu"><span class="text">blog detail sidebar right</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="javascript:void(0)" class="main-menu"><span class="text">pages</span></a><span class="icons-dropdown"><i class="fa fa-angle-right"></i></span>
+                        <ul class="mb-menu-dropdown">
+                            <li><a href="event.html" class="sub-menu"><span class="text">event</span></a></li>
+                            <li><a href="gallery.html" class="sub-menu"><span class="text">gallery 01</span></a></li>
+                            <li><a href="gallery-2.html" class="sub-menu"><span class="text">gallery 02</span></a></li>
+                            <li><a href="gallery-3.html" class="sub-menu"><span class="text">gallery 03</span></a></li>
+                            <li><a href="404.html" class="sub-menu"><span class="text">page 404</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" class="main-menu"><span class="text">contact</span></a></li>
+                </ul>
+            </div>
+            <!-- SEARCH MOBILE-->
+            <div class="wrapper-search-mobile">
+                <div class="mb-social-wrapper">
+                    <div class="mb-button-close"><i class="icons fa fa-times"></i></div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="mb-search">
+                    <form><input type="text" placeholder="Search" onfocus="this.placeholder = ''" class="searchbox" />
+                        <div class="line-boder"></div><button type="submit" class="searchbutton fa fa-search"></button></form>
+                </div>
+            </div>
+            <!-- WRAPPER CONTENT-->
+            <div class="wrapper-content">
+                <!-- HEADER-->
+                <header>
+                    <div class="bg-transparent">
+                        <div class="header-topbar">
+                            <div class="container">
+                                <ul class="topbar-left list-unstyled pull-left">
+                                    <li>
+                                        <a href="javascript:void(0)" class="link"> <i class="icons fa fa-circle"></i><span>Order Online</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" class="link"> <i class="icons-2 fa fa-clock-o"></i><span>07:30 am - 11:00 pm</span></a>
+                                    </li>
+                                </ul>
+                                <ul class="topbar-right list-unstyled list-inline style-2">
+                                    <li>
+                                        <a href="#" class="link"> <i class="icons-2 fa fa-user"></i><span>my account</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="link"> <i class="icons-2 fa fa-cart-plus"></i><span class="cart-counter">1</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="header-main">
+                            <div class="container">
+                                <div class="header-main-wrapper">
+                                    <div class="hamburger-menu-mobile"><i class="icons fa fa-bars"></i></div>
+                                    <div class="logo-wrapper">
+                                        <a href="index.html" class="logo"><img src="assets/images/logo/gamba.png" alt="" /></a>
+                                    </div>
+                                    <nav class="navigation">
+                                        <ul class="nav-links nav navbar-nav">
+                                            <li class="dropdown"><a href="index.html" class="main-menu"><span class="text">Home</span></a>
+                                                <ul class="menu-dropdown">
+                                                    <li><a href="index.html" class="sub-menu"><span class="text">Homepage 01</span></a></li>
+                                                    <li><a href="homepage-2.html" class="sub-menu"><span class="text">Homepage 02</span></a></li>
+                                                    <li><a href="homepage-3.html" class="sub-menu"><span class="text">Homepage 03</span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="about.html" class="main-menu"><span class="text">about</span></a></li>
+                                            <li class="dropdown"><a href="shop.html" class="main-menu"><span class="text">Shop</span></a>
+                                                <ul class="menu-dropdown">
+                                                    <li><a href="shop.html" class="sub-menu"><span class="text">Shop Grid</span></a></li>
+                                                    <li><a href="shop-list.html" class="sub-menu"><span class="text">Shop List</span></a></li>
+                                                    <li><a href="shop-detail.html" class="sub-menu"><span class="text">Shop Detail</span></a></li>
+                                                    <li><a href="shopping-cart.html" class="sub-menu"><span class="text">Shopping Cart</span></a></li>
+                                                    <li><a href="check-out.html" class="sub-menu"><span class="text">Check Out</span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="javascript:void(0)" class="main-menu"><span class="text">blog</span></a>
+                                                <ul class="menu-dropdown">
+                                                    <li><a href="blog.html" class="sub-menu"><span class="text">blog Grid</span></a></li>
+                                                    <li><a href="blog-list.html" class="sub-menu"><span class="text">blog list</span></a></li>
+                                                    <li><a href="blog-masonry.html" class="sub-menu"><span class="text">blog masonry</span></a></li>
+                                                    <li><a href="blog-left-sidebar.html" class="sub-menu"><span class="text">blog sidebar left</span></a></li>
+                                                    <li class="dropdown-2"><a href="blog-detail.html" class="sub-menu"><span class="text">blog detail</span><i class="icon-dropdown-2 fa fa-angle-right"></i></a>
+                                                        <ul class="menu-dropdown-2 right">
+                                                            <li><a href="blog-detail-2.html" class="sub-menu"><span class="text">blog detail sidebar left</span></a></li>
+                                                            <li><a href="blog-detail.html" class="sub-menu"><span class="text">blog detail sidebar right</span></a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="javascript:void(0)" class="main-menu"><span class="text">pages</span></a>
+                                                <ul class="menu-dropdown">
+                                                    <li><a href="event.html" class="sub-menu"><span class="text">event</span></a></li>
+                                                    <li><a href="gallery.html" class="sub-menu"><span class="text">gallery 01</span></a></li>
+                                                    <li><a href="gallery-2.html" class="sub-menu"><span class="text">gallery 02</span></a></li>
+                                                    <li><a href="gallery-3.html" class="sub-menu"><span class="text">gallery 03</span></a></li>
+                                                    <li><a href="404.html" class="sub-menu"><span class="text">page 404</span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="contact.html" class="main-menu"><span class="text">contact</span></a></li>
+                                        </ul>
+                                        <div class="button-search">
+                                            <p class="main-menu"><i class="fa fa-search"></i></p>
+                                        </div>
+                                        <div class="nav-search hide">
+                                            <form><input type="text" placeholder="Search" class="searchbox" /><button type="submit" class="searchbutton fa fa-search"></button></form>
+                                        </div>
+                                    </nav>
+                                    <div class="button-search-mobile"><i class="icons fa fa-search"></i></div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <!-- MAIN CONTENT-->
+                <div class="main-contents">
+                    <h1>jQuery-directional-hover</h1></div>
+                <!-- FOOTER-->
+                <footer>
+                    <div class="footer">
+                        <div class="subscribe-email">
+                            <div class="subscribe-email-wrapper">
+                                <div class="subscribe-email-left">
+                                    <p class="subscribe-email-title"><strong>Subscribe</strong> to our special offers</p>
+                                    <p class="subscribe-email-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui fficia runt sedwsa.</p>
+                                </div>
+                                <div class="subscribe-email-right">
+                                    <form>
+                                        <div class="input-group form-subscribe-email"><input type="text" placeholder="Type Your Email" class="form-control" /><span class="input-group-btn"><button type="submit" class="btn-email"></button></span></div>
+                                    </form>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        <div class="footer-wrapper">
+                            <div class="footer-main">
+                                <div class="container">
+                                    <a href="index.html" class="footer-logo"><img src="assets/images/logo/gamba.png" alt="" class="img-responsive" /></a>
+                                    <div class="footer-main-wrapper">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <div class="col-md-3 col-xs-6">
+                                                    <div class="gamba-info widget">
+                                                        <div class="title">Contact us</div>
+                                                        <div class="content-widget">
+                                                            <ul class="list-unstyled info-list">
+                                                                <li><i class="icons fa fa-map-marker"></i><a href="#" class="link">416 Ridge Road, Pratt, KS 67124</a></li>
+                                                                <li><i class="icons fa fa-phone"></i><a href="#" class="link link-2">(+1) 090-016-679 <br> (+1) 092-552-179</a></li>
+                                                                <li><i class="icons fa fa-envelope-o"></i><a href="#" class="link">hello@gamba.com</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col-xs-6">
+                                                    <div class="gamba-service widget">
+                                                        <div class="title">our service</div>
+                                                        <div class="content-widget">
+                                                            <ul class="list-unstyled">
+                                                                <li> <a href="#" class="link">Social media monitoring</a></li>
+                                                                <li> <a href="#" class="link">Web & App solution</a></li>
+                                                                <li> <a href="#" class="link">Creative process</a></li>
+                                                                <li> <a href="#" class="link">Sofware Development</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-2">
+                                                <div class="col-md-3 col-xs-6">
+                                                    <div class="gamba-twitter widget">
+                                                        <div class="title">twitter widget</div>
+                                                        <div class="content-widget">
+                                                            <div class="twitter-wrapper">
+                                                                <div class="text">Looking for awesome PSD template?</div>
+                                                                <div class="link">Find it here: <a href="#">http://tf.net/gamba</a></div>
+                                                                <div class="time-post"><i class="fa fa-twitter"></i><span> 01 day ago</span></div>
+                                                            </div>
+                                                            <div class="twitter-wrapper">
+                                                                <div class="text">You need an image stock</div>
+                                                                <div class="link">Find it here: <a href="#">http://tf.net/gamba</a></div>
+                                                                <div class="time-post"><i class="fa fa-twitter"></i><span> 01 day ago</span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col-xs-6">
+                                                    <div class="gamba-gallery widget">
+                                                        <div class="title">gallery</div>
+                                                        <div class="content-widget">
+                                                            <ul class="list-unstyled list-inline">
+                                                                <li>
+                                                                    <a href="assets/images/products/thumbnail-1.jpg" data-fancybox-group="gallery2" class="thumb fancybox"><img src="assets/images/products/thumbnail-1.jpg" alt="gallery image 1" class="img-full" /></a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="assets/images/products/thumbnail-2.jpg" data-fancybox-group="gallery2" class="thumb fancybox"><img src="assets/images/products/thumbnail-2.jpg" alt="gallery image 2" class="img-full" /></a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="assets/images/products/thumbnail-3.jpg" data-fancybox-group="gallery2" class="thumb fancybox"><img src="assets/images/products/thumbnail-3.jpg" alt="gallery image 3" class="img-full" /></a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="assets/images/news/image-2.jpg" data-fancybox-group="gallery2" class="thumb fancybox"><img src="assets/images/news/image-2.jpg" alt="gallery image 4" class="img-full" /></a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="assets/images/news/image-3.jpg" data-fancybox-group="gallery2" class="thumb fancybox"><img src="assets/images/news/image-3.jpg" alt="gallery image 5" class="img-full" /></a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="assets/images/news/image-4.jpg" data-fancybox-group="gallery2" class="thumb fancybox"><img src="assets/images/news/image-4.jpg" alt="gallery image 6" class="img-full" /></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hyperlink">
+                                <div class="container">
+                                    <div class="name-company pull-left">&copy; Designed by GAMBA.</div>
+                                    <div class="social-footer pull-right">
+                                        <ul class="list-inline list-unstyled">
+                                            <li><a href="#" class="link facebook"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#" class="link twitter"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#" class="link pinterest"><i class="fa fa-pinterest-p"></i></a></li>
+                                            <li><a href="#" class="link google"><i class="fa fa-google"></i></a></li>
+                                            <li><a href="#" class="link instagram"><i class="fa fa-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- LIVE SETTING-->
+                <div id="live-setting">
+                    <div class="btn-live-setting"><i class="gb-icons fa fa-cog"></i></div>
+                    <div class="live-setting-content">
+                        <div class="btn-purchase-wrapper"><a href="https://themeforest.net/item/gamba-organic-html-template/18048791?s_rank=1" class="btn btn-maincolor btn-purchase">purchase now</a></div>
+                        <div class="layout-options skin-color">
+                            <h5 class="title">color option</h5>
+                            <ul class="list-color list-unstyled list-inline">
+                                <li>
+                                    <a href="#" data-color="custom-color-1" class="color active"></a>
+                                </li>
+                                <li>
+                                    <a href="#" data-color="custom-color-2" class="color"></a>
+                                </li>
+                                <li>
+                                    <a href="#" data-color="custom-color-3" class="color"></a>
+                                </li>
+                                <li>
+                                    <a href="#" data-color="custom-color-4" class="color"></a>
+                                </li>
+                                <li>
+                                    <a href="#" data-color="custom-color-5" class="color"></a>
+                                </li>
+                                <li>
+                                    <a href="#" data-color="custom-color-6" class="color"></a>
+                                </li>
+                                <li>
+                                    <a href="#" data-color="custom-color-7" class="color"></a>
+                                </li>
+                                <li>
+                                    <a href="#" data-color="custom-color-8" class="color"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="layout-options skin-bg">
+                            <h5 class="title">layout option</h5>
+                            <ul role="tablist" class="tab-menu">
+                                <li role="presentation" class="active"><a href="#layout-wide" role="tab" data-toggle="tab" class="link layout-wide active">wide</a></li>
+                                <li role="presentation"><a href="#layout-boxed" role="tab" data-toggle="tab" class="link layout-boxed">boxed</a></li>
+                            </ul>
+                            <div class="layout-option-content tab-content">
+                                <div id="layout-wide" role="tabpanel" class="layout-options-child tab-pane fade in active">
+                                    <ul class="list-color list-unstyled list-inline">
+                                        <li>
+                                            <a href="#" data-color="#fff" class="color active"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-color="#e9e9e9" class="color"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-color="#c5f1b1" class="color"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-color="#fff9f9" class="color"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-color="#e9eaf7" class="color"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="layout-boxed" role="tabpanel" class="layout-options-child tab-pane fade">
+                                    <ul class="list-color list-unstyled list-inline">
+                                        <li>
+                                            <a href="#" data-color="#f9f9f9" class="color active"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-color="#e9e9e9" class="color"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-color="#25363a" class="color"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-color="#333" class="color"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-color="#000" class="color"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-color="0" data-bg="1" class="color"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-color="0" data-bg="2" class="color"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-color="0" data-bg="3" class="color"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-color="0" data-bg="4" class="color"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-color="0" data-bg="5" class="color"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- BUTTON BACK TO TOP-->
+                <div id="back-top"><a href="#top" class="link gamba-circles"><span class="circle"></span><span class="circle"></span><span class="circle"></span><span class="circle"></span><i class="fa fa-angle-double-up"></i></a></div>
+            </div>
+        </div>
+        <!-- LIBRARY JS-->
+        <script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/libs/bootstrap-timepicker/jquery.timepicker.min.js"></script>
+        <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+        <script src="assets/libs/smooth-scroll/jquery-smoothscroll.min.js"></script>
+        <script src="assets/libs/mouse-direction-aware/dist/jquery.directional-hover.min.js"></script>
+        <script src="assets/libs/wow-js/wow.min.js"></script>
+        <script src="assets/libs/count-to/numscroller.js"></script>
+        <script src="assets/libs/slick-slider/slick.min.js"></script>
+        <script src="assets/libs/isotope/isotope.pkgd.min.js"></script>
+        <script src="assets/libs/custom-scroll/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="assets/libs/fancybox/js/jquery.fancybox.min.js"></script>
+        <script src="assets/libs/fancybox/js/jquery.fancybox-buttons.min.js"></script>
+        <script src="assets/libs/fancybox/js/jquery.fancybox-thumbs.min.js"></script>
+        <!-- MAIN JS-->
+        <script src="assets/js/main.js">
+        </script>
+        <!-- LOADING SCRIPTS FOR PAGE-->
+    </body>
+
+</html>
