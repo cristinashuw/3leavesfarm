@@ -27,6 +27,7 @@
         <link type="text/css" rel="stylesheet" href="assets/css/components.css">
         <link type="text/css" rel="stylesheet" href="assets/css/responsive.css">
 
+
         <!-- LIBRARY JS -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
@@ -65,10 +66,11 @@
                     <li><a href="#shop" class="main-menu"><span class="text">Shop</span></a></li>
                     <li><a href="#testi" class="main-menu"><span class="text">Testimonial</span></a></li>
                     <li><a href="#contact" class="main-menu"><span class="text">Contact</span></a></li>
+                    <li><a href="cart.html" class="main-menu"><span class="text"><i class="icons fa fa-cart-plus"></i></span></a></li>
                 </ul>
             </div>
             <!-- SEARCH MOBILE-->
-            <div class="wrapper-search-mobile">
+            <!-- <div class="wrapper-search-mobile">
                 <div class="mb-social-wrapper">
                     <div class="mb-button-close"><i class="icons fa fa-times"></i></div>
                     <div class="clearfix"></div>
@@ -77,7 +79,7 @@
                     <form><input type="text" placeholder="Search" onfocus="this.placeholder = ''" class="searchbox" />
                         <div class="line-boder"></div><button type="submit" class="searchbutton fa fa-search"></button></form>
                 </div>
-            </div>
+            </div> -->
             <!-- WRAPPER CONTENT-->
             <div class="wrapper-content">
                 <!-- HEADER-->
@@ -91,7 +93,7 @@
                                 <div class="header-main-wrapper">
                                     <div class="hamburger-menu-mobile"><i class="icons fa fa-bars"></i></div>
                                     <div class="logo-wrapper">
-                                        <a href="" class="logo"><img src="assets/images/logo3lf/fullWhite.png" alt="" /></a>
+                                        <div class="logo"><img src="assets/images/logo3lf/fullWhite.png" alt="" /></div>
                                     </div>
                                     <nav class="navigation">
                                         <ul class="nav-links nav navbar-nav">
@@ -100,15 +102,10 @@
                                             <li><a href="#shop" class="main-menu"><span class="text">Shop</span></a></li>
                                             <li><a href="#testi" class="main-menu"><span class="text">Testimonial</span></a></li>
                                             <li><a href="#contact" class="main-menu"><span class="text">Contact</span></a></li>
+                                            <li><a href="cart.html" class="main-menu"><span class="text"><i class="icons fa fa-cart-plus"></i></span></a></li>
                                         </ul>
-                                        <div class="button-search">
-                                            <p class="main-menu"><i class="fa fa-search"></i></p>
-                                        </div>
-                                        <div class="nav-search hide">
-                                            <form><input type="text" placeholder="Search" class="searchbox" /><button type="submit" class="searchbutton fa fa-search"></button></form>
-                                        </div>
                                     </nav>
-                                    <div class="button-search-mobile"><i class="icons fa fa-search"></i></div>
+                                    <!-- <div class="button-search-mobile"><i class="icons fa fa-search"></i></div> -->
                                     <div class="clearfix"></div>
                                 </div>
                             </div>
@@ -237,408 +234,515 @@
                             <div class="main-content">
                                 <div class="gallery-nav">
                                     <ul class="tab-filter tab-menu">
-                                        <li data-filter="*" data-category="all" class="tab active">
-                                            <div class="link">all</div>
+                                        <li data-filter="*" data-category="all" id="tb1" class="tab active">
+                                            <div class="link" onClick="tab000()">all</div>
                                         </li>
-                                        <li data-filter=".tab-1" data-category="tab-1" class="tab">
-                                            <div class="link">Organic</div>
+                                        <li data-filter=".tab-1" data-category="tab-1" id="tb2" class="tab">
+                                            <div class="link" onClick="tab111()">Organic</div>
                                         </li>
-                                        <li data-filter=".tab-2" data-category="tab-2" class="tab">
-                                            <div class="link">Hidroponic</div>
+                                        <li data-filter=".tab-2" data-category="tab-2" id="tb3" class="tab">
+                                            <div class="link" onClick="tab222()">Hidroponic</div>
                                         </li>
                                     </ul>
                                 </div>
 
-                                <div class="gallery-grid">
+                                <div class="wrap">
 
-
-
-
-
-
-                                    <div class="grid-item tab-1">
+									                <div class="box-hidden tab11">
+                                    <div class="box">
                                         <div class="block-4">
-                                            <div class="block-image"><img src="assets/images/gallery/caisimorganik.jpeg" alt="" width="600px" height="300px">
-                                                <a href="" class="link"></a>
+                                            <div class="block-image"><img src="assets/images/gallery/caisimorganik.jpeg" alt="" width="300px" height="250px">
+
                                             </div>
                                             <div class="open-modal">
-                                             <div class="block-content"><a href="#" class="title">Caisim Organik</a>
+                                             <div class="block-content"><div class="title">Caisim Organik</div>
                                                 <div class="prices-wrapper">
                                                     <div class="prices"><sup>Rp</sup><span class="number">50.000</span></div><span class="unit">/kg</span></div>
                                                 <ul class="list-icons">
-                                                    <li><a href="#" class="link"><i class="icons fa fa-cart-plus"></i></a></li>
+                                                    <li><a class="cartform link" onClick='cartform1("Caisim Organik", "1", "Rp.50.000")'><i class="icons fa fa-cart-plus"></i></a></li>
                                                 </ul>
                                              </div>
                                           </div>
                                         </div>
                                     </div>
-                                    <div class="grid-item tab-2">
+                                  </div>
+
+                                    <div class="box-hidden tab22">
+                                    <div class="box">
                                         <div class="block-4">
-                                            <div class="block-image"><img src="assets/images/products/image-1.png" alt="" width="600px" height="300px">
-                                                <a href="blog-detail.html" class="link"></a>
+                                            <div class="block-image"><img src="assets/images/gallery/LollorosaLettucegradeA.jpeg" alt="" width="300px" height="250px">
+
                                             </div>
-                                            <div class="block-content"><a href="#" class="title">Lollo Bionda (Curly Lettuce) Grate A</a>
+                                            <div class="block-content"><div class="title">Lollo Bionda (Curly Lettuce) Grade A</div>
                                                 <div class="prices-wrapper">
                                                     <div class="prices"><sup>Rp</sup><span class="number">80.000</span></div><span class="unit">/kg</span></div>
                                                 <ul class="list-icons">
-                                                    <li><a href="#" class="link"><i class="icons fa fa-cart-plus"></i></a></li>
+                                                    <li><a class="cartform link" onClick='cartform1("Lollo Bionda (Curly Lettuce) Grade A", "2", "Rp 80.000")'><i class="icons fa fa-cart-plus"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="grid-item tab-1">
+                                    </div>
+                                    <div class="box-hidden tab11">
+                                    <div class="box">
                                         <div class="block-4">
-                                            <div class="block-image"><img src="assets/images/products/image-2.png" alt="" class="img-full">
-                                                <a href="blog-detail.html" class="link"></a>
+                                            <div class="block-image"><img src="assets/images/gallery/pakchoy.jpeg" alt="" width="300px" height="250px">
+
                                             </div>
-                                            <div class="block-content"><a href="#" class="title">Green PakCoy Organik</a>
+                                            <div class="block-content"><div class="title">Green PakCoy Organik</div>
                                                 <div class="prices-wrapper">
                                                     <div class="prices"><sup>Rp</sup><span class="number">50.000</span></div><span class="unit">/kg</span></div>
                                                 <ul class="list-icons">
-                                                    <li><a href="#" class="link"><i class="icons fa fa-cart-plus"></i></a></li>
+                                                    <li><a class="cartform link" onClick='cartform1("Green PakCoy Organik", "3", "Rp 50.000")'><i class="icons fa fa-cart-plus"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="grid-item tab-1">
+                                    </div>
+                                    <div class="box-hidden tab11">
+                                    <div class="box">
                                         <div class="block-4">
-                                            <div class="block-image"><img src="assets/images/gallery/bayamhijauorganik.jpeg" alt="" width="600" height="300">
-                                                <a href="blog-detail.html" class="link"></a>
+                                            <div class="block-image"><img src="assets/images/gallery/bayamhijauorganik.jpeg" alt="" width="300px" height="250px">
+
                                             </div>
-                                            <div class="block-content"><a href="#" class="title">Bayam Hijau Organik</a>
+                                            <div class="block-content"><div class="title">Bayam Hijau Organik</div>
                                                 <div class="prices-wrapper">
                                                     <div class="prices"><sup>Rp</sup><span class="number">50.000</span></div><span class="unit">/kg</span></div>
                                                 <ul class="list-icons">
-                                                    <li><a href="#" class="link"><i class="icons fa fa-cart-plus"></i></a></li>
+                                                    <li><a class="cartform link" onClick='cartform1("Bayam Hijau Organik", "4", "Rp 50.000")'><i class="icons fa fa-cart-plus"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="grid-item tab-1">
+                                    </div>
+                                    <div class="box-hidden tab11">
+                                    <div class="box">
                                         <div class="block-4">
-                                            <div class="block-image"><img src="assets/images/gallery/bayammerahorganik.jpeg" alt="" width="600" height="300">
-                                                <a href="blog-detail.html" class="link"></a>
+                                            <div class="block-image"><img src="assets/images/gallery/bayammerahorganik.jpeg" alt="" width="300px" height="250px">
+
                                             </div>
-                                            <div class="block-content"><a href="#" class="title">Bayam Merah Organik</a>
+                                            <div class="block-content"><div class="title">Bayam Merah Organik</div>
                                                 <div class="prices-wrapper">
                                                     <div class="prices"><sup>Rp</sup><span class="number">55.000</span></div><span class="unit">/kg</span></div>
                                                 <ul class="list-icons">
-                                                    <li><a href="#" class="link"><i class="icons fa fa-cart-plus"></i></a></li>
+                                                    <li><a class="cartform link" onClick='cartform1("Bayam Merah Organik", "5", "Rp 55.000")'><i class="icons fa fa-cart-plus"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="grid-item tab-2">
-                                        <div class="block-4">
-                                            <div class="block-image"><img src="assets/images/products/image-2.png" alt="" width="600" height="300">
-                                                <a href="blog-detail.html" class="link"></a>
-                                            </div>
-                                            <div class="block-content"><a href="#" class="title">Pak Choy Hidroponik</a>
-                                                <div class="prices-wrapper">
-                                                    <div class="prices"><sup>Rp</sup><span class="number">50.000</span></div><span class="unit">/kg</span></div>
-                                                <ul class="list-icons">
-                                                    <li><a href="#" class="link"><i class="icons fa fa-cart-plus"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
                                     </div>
-
-
-                                    <div class="grid-item tab-1">
+                                    <div class="box-hidden tab11">
+                                    <div class="box">
                                         <div class="block-4">
-                                            <div class="block-image"><img src="assets/images/gallery/kangkungorganik.jpeg" alt="" width="600" height="300">
-                                                <a href="blog-detail.html" class="link"></a>
+                                            <div class="block-image"><img src="assets/images/gallery/kangkungorganik.jpeg" alt="" width="300px" height="250px">
+
                                             </div>
-                                            <div class="block-content"><a href="#" class="title">Kangkung Organik</a>
+                                            <div class="block-content"><div class="title">Kangkung Organik</div>
                                                 <div class="prices-wrapper">
                                                     <div class="prices"><sup>Rp</sup><span class="number">45.000</span></div><span class="unit">/kg</span></div>
                                                 <ul class="list-icons">
-                                                    <li><a href="#" class="link"><i class="icons fa fa-cart-plus"></i></a></li>
+                                                    <li><a class="cartform link" onClick='cartform1("Kangkung Organik", "7", "Rp 45.000")'><i class="icons fa fa-cart-plus"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="grid-item tab-1">
+                                    </div>
+                                    <div class="box-hidden tab22">
+                                    <div class="box">
                                         <div class="block-4">
-                                            <div class="block-image"><img src="assets/images/gallery/SeladaKeritingOrganik.jpeg" alt="" width="600" height="300">
-                                                <a href="blog-detail.html" class="link"></a>
+                                            <div class="block-image"><img src="assets/images/gallery/pakchoy.jpeg" alt="" width="300px" height="250px">
+
                                             </div>
-                                            <div class="block-content"><a href="#" class="title">Selada Keriting Organik</a>
+                                            <div class="block-content"><div class="title">Pak Choy Hidroponik</div>
+                                                <div class="prices-wrapper">
+                                                    <div class="prices"><sup>Rp</sup><span class="number">50.000</span></div><span class="unit">/kg</span></div>
+                                                <ul class="list-icons">
+                                                    <li><a class="cartform link" onClick='cartform1("Pak Choy Hidroponik", "6", "Rp 50.000")'><i class="icons fa fa-cart-plus"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+									                  </div>
+
+                                    <div class="box-hidden tab11">
+                                    <div class="box">
+                                        <div class="block-4">
+                                            <div class="block-image"><img src="assets/images/gallery/SeladaKeritingOrganik.jpeg" alt="" width="300px" height="250px">
+
+                                            </div>
+                                            <div class="block-content"><div class="title">Selada Keriting Organik</div>
                                                 <div class="prices-wrapper">
                                                     <div class="prices"><sup>Rp</sup><span class="number">55.000</span></div><span class="unit">/kg</span></div>
                                                 <ul class="list-icons">
-                                                    <li><a href="#" class="link"><i class="icons fa fa-cart-plus"></i></a></li>
+                                                    <li><a class="cartform link" onClick='cartform1("Selada Keriting Organik", "8", "Rp 55.000")'><i class="icons fa fa-cart-plus"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="grid-item tab-1">
+                                    </div>
+                                    <div class="box-hidden tab11">
+                                    <div class="box">
                                         <div class="block-4">
-                                            <div class="block-image"><img src="assets/images/products/image-6.png" alt="" width="600" height="300">
-                                                <a href="blog-detail.html" class="link"></a>
+                                            <div class="block-image"><img src="assets/images/gallery/kailan organik.jpeg" alt="" width="300px" height="250px">
+
                                             </div>
-                                            <div class="block-content"><a href="#" class="title">Kailan Organik</a>
+                                            <div class="block-content"><div class="title">Kailan Organik</div>
                                                 <div class="prices-wrapper">
                                                     <div class="prices"><sup>Rp</sup><span class="number">55.000</span></div><span class="unit">/kg</span></div>
                                                 <ul class="list-icons">
-                                                    <li><a href="#" class="link"><i class="icons fa fa-cart-plus"></i></a></li>
+                                                    <li><a class="cartform link" onClick='cartform1("Kailan Organik", "9", "Rp 55.000")'><i class="icons fa fa-cart-plus"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="grid-item tab-1">
+                                    </div>
+                                    <div class="box-hidden tab11">
+                                    <div class="box">
                                         <div class="block-4">
-                                            <div class="block-image"><img src="assets/images/gallery/kale.jpeg" alt="" width="600" height="300">
-                                                <a href="blog-detail.html" class="link"></a>
+                                            <div class="block-image"><img src="assets/images/gallery/kale.jpeg" alt="" width="300px" height="250px">
+
                                             </div>
-                                            <div class="block-content"><a href="#" class="title">Kale Organik</a>
+                                            <div class="block-content"><div class="title">Kale Organik</div>
                                                 <div class="prices-wrapper">
                                                     <div class="prices"><sup>Rp</sup><span class="number">70.000</span></div><span class="unit">/kg</span></div>
                                                 <ul class="list-icons">
-                                                    <li><a href="#" class="link"><i class="icons fa fa-cart-plus"></i></a></li>
+                                                    <li><a class="cartform link" onClick='cartform1("Kale Organik", "10", "Rp 70.000")'><i class="icons fa fa-cart-plus"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="grid-item tab-1">
+                                    </div>
+                                    <div class="box-hidden tab11">
+                                    <div class="box">
                                         <div class="block-4">
-                                            <div class="block-image"><img src="assets/images/products/image-5.png" alt="" width="600" height="300">
-                                                <a href="blog-detail.html" class="link"></a>
+                                            <div class="block-image"><img src="assets/images/gallery/cabe merah keriting organik.jpeg" alt="" width="300px" height="250px">
+
                                             </div>
-                                            <div class="block-content"><a href="#" class="title">Cabe Merah Keriting</a>
+                                            <div class="block-content"><div class="title">Cabe Merah Keriting Organik</div>
                                                 <div class="prices-wrapper">
                                                     <div class="prices"><sup>Rp</sup><span class="number">55.000</span></div><span class="unit">/kg</span></div>
                                                 <ul class="list-icons">
-                                                    <li><a href="#" class="link"><i class="icons fa fa-cart-plus"></i></a></li>
+                                                    <li><a class="cartform link" onClick='cartform1("Cabe Merah Keriting Organik", "11", "Rp 55.000")'><i class="icons fa fa-cart-plus"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="grid-item tab-2">
+                                    </div>
+                                    <div class="box-hidden tab22">
+                                    <div class="box">
                                         <div class="block-4">
-                                            <div class="block-image"><img src="assets/images/products/image-5.png" alt="" width="600" height="300">
-                                                <a href="blog-detail.html" class="link"></a>
+                                            <div class="block-image"><img src="assets/images/gallery/lollobiondagradeB.jpeg" alt="" width="300px" height="250px">
+
                                             </div>
-                                            <div class="block-content"><a href="#" class="title">Lollo Bionda (Curly Lettuce) Grate B</a>
+                                            <div class="block-content"><div class="title">Lollo Bionda (Curly Lettuce) Grade B</div>
                                                 <div class="prices-wrapper">
                                                     <div class="prices"><sup>Rp</sup><span class="number">60.000</span></div><span class="unit">/kg</span></div>
                                                 <ul class="list-icons">
-                                                    <li><a href="#" class="link"><i class="icons fa fa-cart-plus"></i></a></li>
+                                                    <li><a class="cartform link" onClick='cartform1("Lollo Bionda (Curly Lettuce) Grade B", "12", "Rp 60.000")'><i class="icons fa fa-cart-plus"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="grid-item tab-1">
+                                    </div>
+                                    <!-- <div class="box-hidden tab11">
+                                    <div class="box">
                                         <div class="block-4">
-                                            <div class="block-image"><img src="assets/images/products/image-5.png" alt="" width="600" height="300">
-                                                <a href="blog-detail.html" class="link"></a>
+                                            <div class="block-image"><img src="assets/images/gallery/CabeRawitMerah.jpeg" alt="" width="300px" height="250px">
+
                                             </div>
-                                            <div class="block-content"><a href="#" class="title">Cabe Rawit Hijau / Merah</a>
+                                            <div class="block-content"><div class="title">Cabe Rawit Hijau / Merah Organik</div>
                                                 <div class="prices-wrapper">
-                                                    <div class="prices"><sup>Rp</sup><span class="number">55.000</span></div><span class="unit">/kg</span></div>
+                                                    <div class="prices"><sup>Rp</sup><span class="number">50.000</span></div><span class="unit">/kg</span></div>
                                                 <ul class="list-icons">
-                                                    <li><a href="#" class="link"><i class="icons fa fa-cart-plus"></i></a></li>
+                                                    <li><a class="cartform link" onClick='cartform1("Cabe Rawit Hijau / Merah Organik", "13", "Rp 50.000")'><i class="icons fa fa-cart-plus"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="grid-item tab-2">
+                                    </div> -->
+                                    <div class="box-hidden tab22">
+                                    <div class="box">
                                         <div class="block-4">
-                                            <div class="block-image"><img src="assets/images/gallery/LollorosaLettucegradeA.jpeg" alt="" width="600" height="300">
-                                                <a href="blog-detail.html" class="link"></a>
+                                            <div class="block-image"><img src="assets/images/gallery/LollorosaLettucegradeA.jpeg" alt="" width="300px" height="250px">
+
                                             </div>
-                                            <div class="block-content"><a href="#" class="title">Lollo Rossa Lettuce Grate A</a>
+                                            <div class="block-content"><div class="title">Lollo Rossa Lettuce Grade A</div>
                                                 <div class="prices-wrapper">
                                                     <div class="prices"><sup>Rp</sup><span class="number">80.000</span></div><span class="unit">/kg</span></div>
                                                 <ul class="list-icons">
-                                                    <li><a href="#" class="link"><i class="icons fa fa-cart-plus"></i></a></li>
+                                                    <li><a class="cartform link" onClick='cartform1("Lollo Rossa Lettuce Grade A", "14", "Rp 80.000")'><i class="icons fa fa-cart-plus"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="grid-item tab-2">
+                                    </div>
+                                    <div class="box-hidden tab22">
+                                    <div class="box">
                                         <div class="block-4">
-                                            <div class="block-image"><img src="assets/images/gallery/LollorosaLettuceGradeB.jpeg" alt="" width="600" height="300">
-                                                <a href="blog-detail.html" class="link"></a>
+                                            <div class="block-image"><img src="assets/images/gallery/LollorosaLettuceGradeB.jpeg" alt="" width="300px" height="250px">
+
                                             </div>
-                                            <div class="block-content"><a href="#" class="title">Lollo Rossa Lettuce Grate B</a>
+                                            <div class="block-content"><div class="title">Lollo Rossa Lettuce Grade B</div>
                                                 <div class="prices-wrapper">
                                                     <div class="prices"><sup>Rp</sup><span class="number">60.000</span></div><span class="unit">/kg</span></div>
                                                 <ul class="list-icons">
-                                                    <li><a href="#" class="link"><i class="icons fa fa-cart-plus"></i></a></li>
+                                                    <li><a class="cartform link" onClick='cartform1("Lollo Rossa Lettuce Grade B", "15", "Rp 60.000")'><i class="icons fa fa-cart-plus"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="grid-item tab-2">
+                                    </div>
+                                    <div class="box-hidden tab22">
+                                    <div class="box">
                                         <div class="block-4">
-                                            <div class="block-image"><img src="assets/images/gallery/RomaineLettuce.jpeg" alt="" width="600" height="300">
-                                                <a href="blog-detail.html" class="link"></a>
+                                            <div class="block-image"><img src="assets/images/gallery/RomaineLettuce.jpeg" alt="" width="300px" height="250px">
+
                                             </div>
-                                            <div class="block-content"><a href="#" class="title">Romaine Lettuce</a>
+                                            <div class="block-content"><div class="title">Romaine Lettuce</div>
                                                 <div class="prices-wrapper">
                                                     <div class="prices"><sup>Rp</sup><span class="number">70.000</span></div><span class="unit">/kg</span></div>
                                                 <ul class="list-icons">
-                                                    <li><a href="#" class="link"><i class="icons fa fa-cart-plus"></i></a></li>
+                                                    <li><a class="cartform link" onClick='cartform1("Romaine Lettuce", "16", "Rp 70.000")'><i class="icons fa fa-cart-plus"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="grid-item tab-2">
+                                    </div>
+                                    <div class="box-hidden tab22">
+                                    <div class="box">
                                         <div class="block-4">
-                                            <div class="block-image"><img src="assets/images/gallery/butterheadlettuce.jpeg" alt="" width="600" height="300">
-                                                <a href="blog-detail.html" class="link"></a>
+                                            <div class="block-image"><img src="assets/images/gallery/butterheadlettuce.jpeg" alt="" width="300px" height="250px">
+
                                             </div>
-                                            <div class="block-content"><a href="#" class="title">Green Butterhead Lettuce</a>
+                                            <div class="block-content"><div class="title">Green Butterhead Lettuce</div>
                                                 <div class="prices-wrapper">
                                                     <div class="prices"><sup>Rp</sup><span class="number">70.000</span></div><span class="unit">/kg</span></div>
                                                 <ul class="list-icons">
-                                                    <li><a href="#" class="link"><i class="icons fa fa-cart-plus"></i></a></li>
+                                                    <li><a class="cartform link" onClick='cartform1("Green Butterhead Lettuce", "17", "Rp 70.000")'><i class="icons fa fa-cart-plus"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="grid-item tab-2">
+                                    </div>
+                                    <div class="box-hidden tab22">
+                                    <div class="box">
                                         <div class="block-4">
-                                            <div class="block-image"><img src="assets/images/gallery/Endive.jpeg" alt="" width="600" height="300">
-                                                <a href="blog-detail.html" class="link"></a>
+                                            <div class="block-image"><img src="assets/images/gallery/Endive.jpeg" alt="" width="300px" height="250px">
+
                                             </div>
-                                            <div class="block-content"><a href="#" class="title">Endive</a>
+                                            <div class="block-content"><div class="title">Endive</div>
                                                 <div class="prices-wrapper">
                                                     <div class="prices"><sup>Rp</sup><span class="number">80.000</span></div><span class="unit">/kg</span></div>
                                                 <ul class="list-icons">
-                                                    <li><a href="#" class="link"><i class="icons fa fa-cart-plus"></i></a></li>
+                                                    <li><a class="cartform link" onClick='cartform1("Endive", "18", "Rp 80.000")'><i class="icons fa fa-cart-plus"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="grid-item tab-2">
+                                    </div>
+                                    <div class="box-hidden tab22">
+                                    <div class="box">
                                         <div class="block-4">
-                                            <div class="block-image"><img src="assets/images/gallery/RedOakleafLettuce.jpeg" alt="" width="600" height="300">
-                                                <a href="blog-detail.html" class="link"></a>
+                                            <div class="block-image"><img src="assets/images/gallery/RedOakleafLettuce.jpeg" alt="" width="300px" height="250px">
+
                                             </div>
-                                            <div class="block-content"><a href="#" class="title">Red Oakleaf Lettuce</a>
+                                            <div class="block-content"><div class="title">Red Oakleaf Lettuce</div>
                                                 <div class="prices-wrapper">
                                                     <div class="prices"><sup>Rp</sup><span class="number">80.000</span></div><span class="unit">/kg</span></div>
                                                 <ul class="list-icons">
-                                                    <li><a href="#" class="link"><i class="icons fa fa-cart-plus"></i></a></li>
+                                                    <li><a class="cartform link" onClick='cartform1("Red Oakleaf Lettuce", "19", "Rp 80.000")'><i class="icons fa fa-cart-plus"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="grid-item tab-2">
+                                    </div>
+                                    <div class="box-hidden tab22">
+                                    <div class="box">
                                         <div class="block-4">
-                                            <div class="block-image"><img src="assets/images/gallery/GreenOakleafLettuce.jpeg" alt="" width="600" height="300">
-                                                <a href="blog-detail.html" class="link"></a>
+                                            <div class="block-image"><img src="assets/images/gallery/GreenOakleafLettuce.jpeg" alt="" width="300px" height="250px">
+
                                             </div>
-                                            <div class="block-content"><a href="#" class="title">Green Oakleaf Lettuce</a>
+                                            <div class="block-content"><div class="title">Green Oakleaf Lettuce</div>
                                                 <div class="prices-wrapper">
                                                     <div class="prices"><sup>Rp</sup><span class="number">70.000</span></div><span class="unit">/kg</span></div>
                                                 <ul class="list-icons">
-                                                    <li><a href="#" class="link"><i class="icons fa fa-cart-plus"></i></a></li>
+                                                    <li><a class="cartform link" onClick='cartform1("Green Oakleaf Lettuce", "20", "Rp 70.000")'><i class="icons fa fa-cart-plus"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="grid-item tab-1 tab-2">
+                                    </div>
+                                    <!-- <div class="box-hidden tab22">
+                                    <div class="box">
                                         <div class="block-4">
-                                            <div class="block-image"><img src="assets/images/products/image-5.png" alt="" width="600" height="300">
-                                                <a href="blog-detail.html" class="link"></a>
+                                            <div class="block-image"><img src="assets/images/products/image-5.png" alt="" width="300px" height="250px">
+
                                             </div>
-                                            <div class="block-content"><a href="#" class="title">Cabe Rawit Setan</a>
+                                            <div class="block-content"><div class="title">Cabe Rawit Setan Hidroponik</div>
                                                 <div class="prices-wrapper">
                                                     <div class="prices"><sup>Rp</sup><span class="number">65.000</span></div><span class="unit">/kg</span></div>
                                                 <ul class="list-icons">
-                                                    <li><a href="#" class="link"><i class="icons fa fa-cart-plus"></i></a></li>
+                                                    <li><a class="cartform link" onClick='cartform1("Cabe Rawit Setan Hidroponik", "21", "Rp 65.000")'><i class="icons fa fa-cart-plus"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="grid-item tab-2">
+                                    </div> -->
+                                    <!-- <div class="box-hidden tab11">
+                                    <div class="box">
                                         <div class="block-4">
-                                            <div class="block-image"><img src="assets/images/gallery/kale.jpeg" alt="" width="600" height="300">
-                                                <a href="blog-detail.html" class="link"></a>
+                                            <div class="block-image"><img src="assets/images/products/image-5.png" alt="" width="300px" height="250px">
+
                                             </div>
-                                            <div class="block-content"><a href="#" class="title">Kale Hidroponik</a>
+                                            <div class="block-content"><div class="title">Cabe Rawit Setan Organik</div>
+                                                <div class="prices-wrapper">
+                                                    <div class="prices"><sup>Rp</sup><span class="number">65.000</span></div><span class="unit">/kg</span></div>
+                                                <ul class="list-icons">
+                                                    <li><a class="cartform link" onClick='cartform1("Cabe Rawit Setan Organik", "30", "Rp 65.000")'><i class="icons fa fa-cart-plus"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div> -->
+                                    <div class="box-hidden tab22">
+                                    <div class="box">
+                                        <div class="block-4">
+                                            <div class="block-image"><img src="assets/images/gallery/kale.jpeg" alt="" width="300px" height="250px">
+
+                                            </div>
+                                            <div class="block-content"><div class="title">Kale Hidroponik</div>
                                                 <div class="prices-wrapper">
                                                     <div class="prices"><sup>Rp</sup><span class="number">80.000</span></div><span class="unit">/kg</span></div>
                                                 <ul class="list-icons">
-                                                    <li><a href="#" class="link"><i class="icons fa fa-cart-plus"></i></a></li>
+                                                    <li><a class="cartform link" onClick='cartform1("Kale Hidroponik", "22", "Rp 80.000")'><i class="icons fa fa-cart-plus"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="grid-item tab-2">
+                                    </div>
+                                    <!-- <div class="box-hidden tab22">
+                                    <div class="box">
                                         <div class="block-4">
-                                            <div class="block-image"><img src="assets/images/products/image-1.png" alt="" width="600" height="300">
-                                                <a href="blog-detail.html" class="link"></a>
+                                            <div class="block-image"><img src="assets/images/gallery/iceberg.jpeg" alt="" width="300px" height="250px">
+
                                             </div>
-                                            <div class="block-content"><a href="#" class="title">Iceberg Lettuce</a>
+                                            <div class="block-content"><div class="title">Iceberg Lettuce</div>
                                                 <div class="prices-wrapper">
                                                     <div class="prices"><sup>Rp</sup><span class="number">60.000</span></div><span class="unit">/kg</span></div>
                                                 <ul class="list-icons">
-                                                    <li><a href="#" class="link"><i class="icons fa fa-cart-plus"></i></a></li>
+                                                    <li><a class="cartform link" onClick='cartform1("Iceberg Lettuce", "23", "Rp 60.000")'><i class="icons fa fa-cart-plus"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="grid-item tab-2">
+                                    </div> -->
+                                    <!-- <div class="box-hidden tab22">
+                                    <div class="box">
                                         <div class="block-4">
-                                            <div class="block-image"><img src="assets/images/gallery/butterheadlettuce.jpeg" alt="" width="600" height="300">
-                                                <a href="blog-detail.html" class="link"></a>
+                                            <div class="block-image"><img src="assets/images/gallery/butterheadlettuce.jpeg" alt="" width="300px" height="250px">
+
                                             </div>
-                                            <div class="block-content"><a href="#" class="title">Salanova – Butterhead Green Lettuce</a>
+                                            <div class="block-content"><div class="title">Salanova – Butterhead Green Lettuce</div>
                                                 <div class="prices-wrapper">
                                                     <div class="prices"><sup>Rp</sup><span class="number">100.000</span></div><span class="unit">/kg</span></div>
                                                 <ul class="list-icons">
-                                                    <li><a href="#" class="link"><i class="icons fa fa-cart-plus"></i></a></li>
+                                                    <li><a class="cartform link" onClick='cartform1("Salanova – Butterhead Green Lettuce", "24", "Rp 100.000")'><i class="icons fa fa-cart-plus"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="grid-item tab-2">
+                                    </div> -->
+                                    <div class="box-hidden tab22">
+                                    <div class="box">
                                         <div class="block-4">
-                                            <div class="block-image"><img src="assets/images/products/image-2.png" alt="" width="600" height="300">
-                                                <a href="blog-detail.html" class="link"></a>
+                                            <div class="block-image"><img src="assets/images/gallery/Salanova butterhead lettuce2.jpeg" alt="" width="300px" height="250px">
+
                                             </div>
-                                            <div class="block-content"><a href="#" class="title">Salanova – Butterhead Red Lettuce</a>
+                                            <div class="block-content"><div class="title">Salanova – Butterhead Red Lettuce</div>
                                                 <div class="prices-wrapper">
                                                     <div class="prices"><sup>Rp</sup><span class="number">100.000</span></div><span class="unit">/kg</span></div>
                                                 <ul class="list-icons">
-                                                    <li><a href="#" class="link"><i class="icons fa fa-cart-plus"></i></a></li>
+                                                    <li><a class="cartform link" onClick='cartform1("Salanova – Butterhead Red Lettuce", "25", "Rp 100.000")'><i class="icons fa fa-cart-plus"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="grid-item tab-2">
+                                    </div>
+
+                                    <div class="box-hidden tab22">
+                                    <div class="box">
                                         <div class="block-4">
-                                            <div class="block-image"><img src="assets/images/gallery/SalanovaCrispyGreenLettuce.jpeg" alt="" width="600" height="300">
-                                                <a href="blog-detail.html" class="link"></a>
+                                            <div class="block-image"><img src="assets/images/gallery/cabe merah keriting.jpeg" alt="" width="300px" height="250px">
+
                                             </div>
-                                            <div class="block-content"><a href="#" class="title">Salanova – Crispy Green Lettuce</a>
+                                            <div class="block-content"><div class="title">Cabe Merah Keriting Hidroponik</div>
+                                                <div class="prices-wrapper">
+                                                    <div class="prices"><sup>Rp</sup><span class="number">50.000</span></div><span class="unit">/kg</span></div>
+                                                <ul class="list-icons">
+                                                    <li><a class="cartform link" onClick='cartform1("Cabe Merah Keriting Hidroponik", "28", "Rp 50.000")'><i class="icons fa fa-cart-plus"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+
+                                    <!-- <div class="box-hidden tab22">
+                                    <div class="box">
+                                        <div class="block-4">
+                                            <div class="block-image"><img src="assets/images/products/image-1.png" alt="" width="300px" height="250px">
+
+                                            </div>
+                                            <div class="block-content"><div class="title">Cabe Rawit Hijau/Merah Hidroponik</div>
+                                                <div class="prices-wrapper">
+                                                    <div class="prices"><sup>Rp</sup><span class="number">50.000</span></div><span class="unit">/kg</span></div>
+                                                <ul class="list-icons">
+                                                    <li><a class="cartform link" onClick='cartform1("Cabe Rawit Hijau/Merah Hidroponik", "29", "Rp 50.000")'><i class="icons fa fa-cart-plus"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div> -->
+
+                                    <div class="box-hidden tab22">
+                                    <div class="box">
+                                        <div class="block-4">
+                                            <div class="block-image"><img src="assets/images/gallery/SalanovaCrispyGreenLettuce.jpeg" alt="" width="300px" height="250px">
+
+                                            </div>
+                                            <div class="block-content"><div class="title">Salanova – Crispy Green Lettuce</div>
                                                 <div class="prices-wrapper">
                                                     <div class="prices"><sup>Rp</sup><span class="number">100.000</span></div><span class="unit">/kg</span></div>
                                                 <ul class="list-icons">
-                                                    <li><a href="#" class="link"><i class="icons fa fa-cart-plus"></i></a></li>
+                                                    <li><a class="cartform link" onClick='cartform1("Salanova – Crispy Green Lettuce", "26", "Rp 100.000")'><i class="icons fa fa-cart-plus"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="grid-item tab-2">
+                                    </div>
+                                    <div class="box-hidden tab22" id="tutup">
+                                    <div class="box">
                                         <div class="block-4">
-                                            <div class="block-image"><img src="assets/images/gallery/FreshBasil.jpeg" alt="" width="600" height="300">
-                                                <a href="blog-detail.html" class="link"></a>
+                                            <div class="block-image"><img src="assets/images/gallery/FreshBasil.jpeg" alt="" width="300px" height="250px">
+
                                             </div>
-                                            <div class="block-content"><a href="#" class="title">Basil</a>
+                                            <div class="block-content"><div class="title">Basil</div>
                                                 <div class="prices-wrapper">
-                                                    <div class="prices"><sup>Rp</sup><span class="number">100.000</span></div><span class="unit">/kg</span></div>
+                                                    <div class="prices"><sup>Rp</sup><span class="number">90.000</span></div><span class="unit">/kg</span></div>
                                                 <ul class="list-icons">
-                                                    <li><a href="#" class="link"><i class="icons fa fa-cart-plus"></i></a></li>
+                                                    <li><a class="cartform link" onClick='cartform1("Basil", "27", "Rp 90.000")'><i class="icons fa fa-cart-plus"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
+                                    </div>
+
                                 </div>
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                            <div class="tab00 wrap-button margin-top-70">
+                                <a href="#" class="btn btn-maincolor" id="loadMore" style="width:120px;">Load More</a>
                             </div>
                                 <!-- <div class="wrap-button margin-top-70">
                                   <a href="#" id="loadMore" class="btn-load">Load More</a>
@@ -663,8 +767,10 @@
                                         </div>
                                         <div class="customer-info">
                                             <div class="icons">"</div>
-                                            <div class="name">phien phien</div>
-                                            <div class="description">An ice cream sundae would never be seen topless. And a bowl of oatmeal would an bore you back seen never be oatmeal would seen.</div>
+                                            <div class="name">Bety (Guru SMK 6)</div>
+                                            <div class="description">
+                                              Ramadhan penuh berkah. Terimakasih 3leaves farm telah berbagi sayuran di Lampu Merah Kepri Mall. Tadi dapat 200 pack, ada dua kali lampu merah.
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -678,8 +784,11 @@
                                         </div>
                                         <div class="customer-info">
                                             <div class="icons">"</div>
-                                            <div class="name">bao bao</div>
-                                            <div class="description">An ice cream sundae would never be seen topless. And a bowl of oatmeal would an bore you back seen never be oatmeal would seen.</div>
+                                            <div class="name">Pinang Fitra</div>
+                                            <div class="description">
+                                              Assalamualaikum pak. Anak saya juga sklh di SLB. Saya berharap kegiatan hidroponik di sekolah dapat memacu semangat anak sy untuk lebih giat lagi membantu saya berhidroponik di rumah.
+                                              Trmksh pak, sy puas dgn produk bpk.
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -693,8 +802,9 @@
                                         </div>
                                         <div class="customer-info">
                                             <div class="icons">"</div>
-                                            <div class="name">Kwon Ji Yong</div>
-                                            <div class="description">An ice cream sundae would never be seen topless. And a bowl of oatmeal would an bore you back seen never be oatmeal would seen.</div>
+                                            <div class="name">Anonymous</div>
+                                            <div class="description">Hatur nuhun kanggo sadaya bimbingan, bantosan sareng kaikhlasana tina program urban farming SMKN 6 Batam.
+                                            Mudah2an tiasa kahontal harepan sareng ikhtiar urang sadayana.. Amin YRA</div>
                                         </div>
                                     </div>
                                 </div>
@@ -708,8 +818,10 @@
                                         </div>
                                         <div class="customer-info">
                                             <div class="icons">"</div>
-                                            <div class="name">Sandara Park </div>
-                                            <div class="description">An ice cream sundae would never be seen topless. And a bowl of oatmeal would an bore you back seen never be oatmeal would seen.</div>
+                                            <div class="name">Bu Neta</div>
+                                            <div class="description">
+                                              Asslkm mba dwi. Makasih ya. Kemarin pesanan saya datang. Ternyata samhong juga buy 1 get 1 ya. Kemarin saya bikin jus campur dengan buah enak sekali. Thanks.
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -723,26 +835,14 @@
                                         </div>
                                         <div class="customer-info">
                                             <div class="icons">"</div>
-                                            <div class="name">bao tuan</div>
-                                            <div class="description">An ice cream sundae would never be seen topless. And a bowl of oatmeal would an bore you back seen never be oatmeal would seen.</div>
+                                            <div class="name">Yovi</div>
+                                            <div class="description">
+                                              Bunganya cantik. Nanti saya jadiin bouquet untuk valentine dan hari Ibu. hahaha. Thanks 3Leaves :3
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="item">
-                                    <div class="customer">
-                                        <div class="gamba-circles-2">
-                                            <div class="circle"></div>
-                                            <div class="circle"></div>
-                                            <div class="circle"></div>
-                                            <div class="circle"></div>
-                                        </div>
-                                        <div class="customer-info">
-                                            <div class="icons">"</div>
-                                            <div class="name">tuan duy</div>
-                                            <div class="description">An ice cream sundae would never be seen topless. And a bowl of oatmeal would an bore you back seen never be oatmeal would seen.</div>
-                                        </div>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </section>
@@ -755,56 +855,57 @@
                                 <div class="grid-block-2">
                                     <div class="grid-item grid-1">
                                         <div class="block-3">
-                                            <div class="block-image"><img src="assets/images/teams/image-1.jpg" alt="" class="img-full">
-                                                <a href="#" class="link"></a>
-                                            </div>
-                                            <div class="block-content"><a href="blog-detail.html" class="title">Kown Jiyong</a>
-                                                <p class="subtitle">CE0-Founder</p>
-                                                <div class="description">
-                                                    <p class="text">We care about what you eat. We want to produce food which nourishes your body and tastes isaw delicious food which nourishes food</p>
-                                                </div>
-                                                <ul class="list-social">
-                                                    <li><a href="#" class="link facebook"><i class="fa fa-facebook"></i></a></li>
-                                                    <li><a href="#" class="link twitter"><i class="fa fa-twitter"></i></a></li>
-                                                    <li><a href="#" class="link google"><i class="fa fa-google"></i></a></li>
-                                                    <li><a href="#" class="link instagram"><i class="fa fa-linkedin"></i></a></li>
-                                                </ul><a href="#" class="btn btn-maincolor">view profile</a></div>
+                                          <div class="block-content"><div class="title">Mr. Cecep</div>
+                                              <p class="subtitle" style="color:green">Farm Consultant</p>
+                                              <div class="description">
+                                                  <p class="text">
+                                                    Untuk pertanian sistem organik udah cukup baik terbukti dgn tumbuhnya cabe dan sayuran dgn menggunakan POC dan mulsa sehingga gulma bisa berkurang.
+                                                  </p>
+                                              </div>
+                                              <ul class="list-social">
+                                                  <li><a href="https://www.facebook.com/3leavesfarm" target="_blank" class="link facebook"><i class="fa fa-facebook"></i></a></li>
+                                                  <li><a href="https://www.yooying.com/3leavesfarm" target="_blank" class="link google"><i class="fa fa-google"></i></a></li>
+                                                  <li><a href="https://www.instagram.com/3leavesfarm" target="_blank" class="link instagram"><i class="fa fa-instagram"></i></a></li>
+                                              </ul>
+                                          </div>
                                         </div>
                                     </div>
-                                    <div class="grid-item grid-2">
-                                        <div class="block-3 style-2">
-                                            <div class="block-content"><a href="blog-detail.html" class="title">Kown Jiyong</a>
-                                                <p class="subtitle">CE0-Founder</p>
+
+                                    <div class="grid-item grid-1">
+                                        <div class="block-3">
+
+                                            <div class="block-content"><div class="title">Mr. Khoir</div>
+                                                <p class="subtitle" style="color:green">Hidroponic Supervisor</p>
                                                 <div class="description">
-                                                    <p class="text">We care about what you eat. We want to produce food which nourishes your body and tastes isaw delicious food which nourishes food</p>
+                                                    <p class="text">
+                                                      Di 3leaves farm, nutrisi di racik sendiri oleh kami dengan menggunakan sistem Hydro buddy dari PT. Meroket Tetap jaya. 3leaves farm menggunakan sistem NFT utk sayuran daun dan Drip Sistem untuk tanaman cabe.
+                                                      Media tanam yang digunakan disebut dengan Rockwool. Rockwool bisa menyimpan nutrisi sendiri jadi jika aliran air mati jangan khawatir karena Rockwool berperan dalam menyimpan nutrisi. 
+                                                    </p>
                                                 </div>
                                                 <ul class="list-social">
-                                                    <li><a href="#" class="link facebook"><i class="fa fa-facebook"></i></a></li>
-                                                    <li><a href="#" class="link twitter"><i class="fa fa-twitter"></i></a></li>
-                                                    <li><a href="#" class="link google"><i class="fa fa-google"></i></a></li>
-                                                    <li><a href="#" class="link instagram"><i class="fa fa-linkedin"></i></a></li>
-                                                </ul><a href="#" class="btn btn-maincolor">view profile</a></div>
-                                            <div class="block-image"><img src="assets/images/teams/image-2.jpg" alt="" class="img-full">
-                                                <a href="#" class="link"></a>
-                                            </div>
+                                                    <li><a href="https://www.facebook.com/3leavesfarm" target="_blank" class="link facebook"><i class="fa fa-facebook"></i></a></li>
+                                                    <li><a href="https://www.yooying.com/3leavesfarm" target="_blank" class="link google"><i class="fa fa-google"></i></a></li>
+                                                    <li><a href="https://www.instagram.com/3leavesfarm" target="_blank" class="link instagram"><i class="fa fa-instagram"></i></a></li>
+                                                </ul></div>
                                         </div>
                                     </div>
-                                    <div class="grid-item grid-2">
-                                        <div class="block-3 style-2">
-                                            <div class="block-image"><img src="assets/images/teams/image-3.jpg" alt="" class="img-full">
-                                                <a href="#" class="link"></a>
+                                    <div class="grid-item grid-1">
+                                        <div class="block-3">
+                                            <div class="block-content"><div class="title">Mr. Khamid</div>
+                                              <p class="subtitle" style="color:green">Organic Supervisor</p>
+                                              <div class="description">
+                                                  <p class="text">
+                                                    3leaves farm menggunakan bahan-bahan organik utk pupuk maupun pestisidanya. Hal ini terbukti mampu memproduksi produk yang baik dan lebih sehat.
+                                                    Dengan mengurangi penggunaan bahan kimia, dapat menghasilkan produk yang lebih ramah lingkungan dan baik bagi kesehatan.
+                                                  </p>
+                                              </div>
+                                              <ul class="list-social">
+                                                  <li><a href="https://www.facebook.com/3leavesfarm" target="_blank" class="link facebook"><i class="fa fa-facebook"></i></a></li>
+                                                  <li><a href="https://www.yooying.com/3leavesfarm" target="_blank" class="link google"><i class="fa fa-google"></i></a></li>
+                                                  <li><a href="https://www.instagram.com/3leavesfarm" target="_blank" class="link instagram"><i class="fa fa-instagram"></i></a></li>
+                                              </ul>
                                             </div>
-                                            <div class="block-content"><a href="blog-detail.html" class="title">Kown Jiyong</a>
-                                                <p class="subtitle">CE0-Founder</p>
-                                                <div class="description">
-                                                    <p class="text">We care about what you eat. We want to produce food which nourishes your body and tastes isaw delicious food which nourishes food</p>
-                                                </div>
-                                                <ul class="list-social">
-                                                    <li><a href="#" class="link facebook"><i class="fa fa-facebook"></i></a></li>
-                                                    <li><a href="#" class="link twitter"><i class="fa fa-twitter"></i></a></li>
-                                                    <li><a href="#" class="link google"><i class="fa fa-google"></i></a></li>
-                                                    <li><a href="#" class="link instagram"><i class="fa fa-linkedin"></i></a></li>
-                                                </ul><a href="#" class="btn btn-maincolor">view profile</a></div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -824,8 +925,8 @@
                                     <p class="subscribe-email-text">3Leaves Farm grow with care, love and passion.</p>
                                 </div>
                                 <div class="subscribe-email-right">
-                                    <form>
-                                        <div class="input-group form-subscribe-email"><input type="text" placeholder="Type Your Email" class="form-control" /><span class="input-group-btn"><button type="submit" class="btn-email"></button></span></div>
+                                    <form method="POST" action="https://formspree.io/cristinashuw@gmail.com">
+                                        <div class="input-group form-subscribe-email"><input type="email" Name="email" placeholder="Type Your Email" class="form-control" /><span class="input-group-btn"><button type="submit" class="btn-email"></button></span></div>
                                     </form>
                                 </div>
                                 <div class="clearfix"></div>
@@ -902,7 +1003,62 @@
                 <div id="back-top"><a href="#top" class="link gamba-circles"><span class="circle"></span><span class="circle"></span><span class="circle"></span><span class="circle"></span><i class="fa fa-angle-double-up"></i></a></div>
             </div>
         </div>
+
+
+        <div id="myModal" class="modal fade">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      <h4 class="modal-title">Your Order List</h4>
+                  </div>
+                  <div class="modal-body">
+                    <center>
+                      <h2><div id="judul"></div></h2>
+                      <div id="gambar"></div>
+                      <h3><div id="harga"></div></h3>
+                    </center>
+                      <br>
+                      <form method="POST" action="">
+                        <!-- <h5><b>Fill in the form below to complete your order.</b></h5> -->
+                          <!-- <input type="email" name="Email" class="form-control" placeholder="Your email" required> <br>
+                          <input type="number" name="Phone Number" class="form-control" placeholder="Your phone number" required><br> -->
+                          <input type="text" name="Order Name" class="form-control" readonly id="judul2" value="" required>
+                          <input type="hidden" name="kode" id="harga2" class="form-control" value=""><br>
+                          <input type="hidden" name="kode" id="gambar2" class="form-control" value=""><br>
+                          <textarea name="Special request?" class="form-control" id="catatan" placeholder="Any special request?"></textarea><br>
+                          <input type="number" name="quantity" id="qty" min="1" max="5" name="Kilogram" class="form-control" placeholder="How many kilogram? " required >
+                          <small>*The minimum order is 1 kilogram.</small>
+
+                          <br><br>
+                          <!-- <center><button type="submit">OK</button></center> -->
+
+                  </div>
+                  <div class="modal-footer">
+                    <input type="reset" value="Reset" class="nextbtn btn-primary">
+                    <button type="button" class="nextbtn btn-primary" onClick="addcart()"> OK </button></form>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+
+		<div id="myModa2" class="modal fade">
+          <div class="modal-dialog">
+              <div class="modal-content" align="center">
+                  Barang Berhasil Mauk ke Keranjang
+              </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
         <!-- LIBRARY JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
         <script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
         <script src="assets/libs/bootstrap-timepicker/jquery.timepicker.min.js"></script>
         <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
@@ -921,22 +1077,269 @@
         <!-- LOADING SCRIPTS FOR PAGE-->
         <script src="assets/libs/parallax/jquery.parallax-scroll.min.js"></script>
 
-        <!-- <script>
-          $(function () {
-            $(".box-hidden").slice(0, 4).show();
-            $("#loadMore").on('click', function (e) {
-              e.preventDefault();
+        <script type="text/javascript">
+	$(function () {
+    $(".box-hidden").slice(0, 6).show();
+    $("#loadMore").on('click', function (e) {
+        e.preventDefault();
+        $(".box-hidden:hidden").slice(0, 3).slideDown();
+        if ($(".box-hidden:hidden").length == 0) {
+            $("#load").fadeOut(9000);
+			if ($("#tutup").show())
+		{
+			$(".tab00").fadeOut("slow");
+		}
+        }
 
-              $(".box-hidden:hidden").slice(0,4).slideDown();
-              if ($(".box-hidden:hidden").length == 0) {
-                $("#load").fadeOut('slow');
-              }
-              $('html,body').animate({
-                scrollTop: $(this).offset().top
-              }, 1500);
-            });
-          });
-        </script> -->
+    });
+});
+$.cookie("j");
+if ($.cookie("j") > 0)
+{
+	var j = $.cookie("j");
+	j++;
+	$.cookie("j", j);
+}
+else
+{
+	$.cookie("j", 1)
+}
+function addcart()
+{
+	var i = $.cookie("j");
+	var sayur = $("#judul2").val();
+	var qty = $("#qty").val();
+	var harga = $("#harga2").val();
+	var gambar = $("#gambar2").val();
+	var catatan = $("#catatan").val();
+	var cek;
+	for (k=0;k<i;k++)
+	{	
+		if ($.cookie("nama"+k) == sayur)
+		{
+			var cek = 1
+			$.cookie("nama"+k, sayur);
+			var xqty = $.cookie("qty"+k);
+			xqty++;
+			xqty--;
+			qty++;
+			qty--;
+			tqty = xqty + qty;
+			$.cookie("qty"+k, tqty);
+		}
+		else if (cek == 1)
+		{
+			var cek = 1;
+		}
+		else 
+		{
+			var cek = 0;
+		}
+	}
+	if (cek == 0)
+	{
+			$.cookie("nama"+i, sayur);
+			$.cookie("qty"+i, qty);
+			$.cookie("harga"+i, harga);
+			$.cookie("gambar"+i, gambar);
+			$.cookie("catatan"+i, catatan);
+			i++;
+			$.cookie("j",i)
+	}
+	$("#myModal").modal('hide');
+	$("#myModa2").modal('show');
+}
+function tab111()
+{
+	$(".tab11").fadeIn("slow");
+	$(".tab22").fadeOut("slow");
+	$(".tab00").hide();
+    $("#tb2").addClass("active");
+    $("#tb3").removeClass("active");
+    $("#tb1").removeClass("active");
+}
+function tab222()
+{
+	$(".tab11").fadeOut("slow");
+	$(".tab22").fadeIn("slow");
+	$(".tab00").hide();
+    $("#tb3").addClass("active");
+    $("#tb1").removeClass("active");
+    $("#tb2").removeClass("active");
+}
+function tab000()
+{
+	$(".tab11").fadeIn("slow");
+	$(".tab22").fadeIn("slow");
+	$(".tab00").hide();
+    $("#tb1").addClass("active");
+    $("#tb2").removeClass("active");
+    $("#tb3").removeClass("active");
+}
+function cartform1(j, g, h)
+{
+     var judul = j;
+	 var gambar = g;
+	 var harga = h;
+	 if (gambar == 1)
+	 {
+		 $("#gambar").html("<img src='assets/images/gallery/caisimorganik.jpeg' alt='' width='200px' height='150px'>")
+		 $("#harga2").val(50000)
+	 }
+	 else if (gambar == 2)
+	 {
+		 $('#gambar').html("<img src='assets/images/gallery/LollorosaLettucegradeA.jpeg' alt='' width='200px' height='150px'>")
+	 	 $("#harga2").val(80000)
+	 }
+	 else if (gambar == 3)
+	 {
+		 $('#gambar').html("<img src='assets/images/gallery/pakchoy.jpeg' alt='' width='200px' height='150px'>")
+		 $("#harga2").val(50000)
+	 }
+	 else if (gambar == 4)
+	 {
+		 $('#gambar').html("<img src='assets/images/gallery/bayamhijauorganik.jpeg' alt='' width='200px' height='150px'>")
+		 $("#harga2").val(50000)
+	 }
+	 else if (gambar == 5)
+	 {
+		 $('#gambar').html("<img src='assets/images/gallery/bayammerahorganik.jpeg' alt='' width='200px' height='150px'>")
+		 $("#harga2").val(55000)
+	 }
+	 else if (gambar == 6)
+	 {
+		 $('#gambar').html("<img src='assets/images/gallery/pakchoy.jpeg' alt='' width='200px' height='150px'>")
+		 $("#harga2").val(50000)
+	 }
+   	 else if (gambar == 7)
+	 {
+		 $('#gambar').html("<img src='assets/images/gallery/kangkungorganik.jpeg' alt='' width='200px' height='150px'>")
+		 $("#harga2").val(45000)
+	 }
+	 else if (gambar == 8)
+	 {
+		 $('#gambar').html("<img src='assets/images/gallery/SeladaKeritingOrganik.jpeg' alt='' width='200px' height='150px'>")
+		 $("#harga2").val(55000)
+	 }
+	 else if (gambar == 9)
+	 {
+		 $('#gambar').html("<img src='assets/images/gallery/kailan organik.jpeg' width='200px' height='150px'>")
+		 $("#harga2").val(55000)
+	 }
+	 else if (gambar == 10)
+	 {
+		 $('#gambar').html("<img src='assets/images/gallery/kale.jpeg' alt='' width='200px' height='150px'>")
+		 $("#harga2").val(70000)
+	 }
+	 else if (gambar == 11)
+	 {
+		 $('#gambar').html("<img src='assets/images/gallery/cabe merah keriting organik.jpeg' alt='' width='200px' height='150px'>")
+		 $("#harga2").val(55000)
+	 }
+	 else if (gambar == 12)
+	 {
+		 $('#gambar').html("<img src='assets/images/gallery/lollobiondagradeB.jpeg' alt='' width='200px' height='150px'>")
+		 $("#harga2").val(60000)
+	 }
+	 else if (gambar == 13)
+	 {
+		 $('#gambar').html("<img src='assets/images/gallery/CabeRawitMerah.jpeg' alt='' width='200px' height='150px'>")
+		 $("#harga2").val(50000)
+	 }
+	 else if (gambar == 14)
+	 {
+		 $('#gambar').html("<img src='assets/images/gallery/LollorosaLettucegradeA.jpeg' alt='' width='200px' height='150px'>")
+		 $("#harga2").val(80000)
+	 }
+	 else if (gambar == 15)
+	 {
+		 $('#gambar').html("<img src='assets/images/gallery/LollorosaLettuceGradeB.jpeg' alt='' width='200px' height='150px'>")
+		 $("#harga2").val(60000)
+	 }
+	 else if (gambar == 16)
+	 {
+		 $('#gambar').html("<img src='assets/images/gallery/RomaineLettuce.jpeg' alt='' width='200px' height='150px'>")
+		 $("#harga2").val(70000)
+	 }
+	 else if (gambar == 17)
+	 {
+		 $('#gambar').html("<img src='assets/images/gallery/butterheadlettuce.jpeg' alt='' width='200px' height='150px'>")
+		 $("#harga2").val(70000)
+	 }
+	 else if (gambar == 18)
+	 {
+		 $('#gambar').html("<img src='assets/images/gallery/Endive.jpeg' alt='' width='200px' height='150px'>")
+		 $("#harga2").val(80000)
+	 }
+	 else if (gambar == 19)
+	 {
+		 $('#gambar').html("<img src='assets/images/gallery/RedOakleafLettuce.jpeg' alt='' width='200px' height='150px'>")
+		 $("#harga2").val(80000)
+	 }
+	 else if (gambar == 20)
+	 {
+		 $('#gambar').html("<img src='assets/images/gallery/GreenOakleafLettuce.jpeg' alt='' width='200px' height='150px'>")
+		 $("#harga2").val(70000)
+	 }
+	 else if (gambar == 21)
+	 {
+		 $('#gambar').html("<img src='assets/images/products/image-5.png' alt='' width='200px' height='150px'>")
+		 $("#harga2").val(65000)
+	 }
+	 else if (gambar == 22)
+	 {
+		 $('#gambar').html("<img src='assets/images/gallery/kale.jpeg' alt='' width='200px' height='150px'>")
+		 $("#harga2").val(80000)
+	 }
+	 else if (gambar == 23)
+	 {
+		 $('#gambar').html("<img src='assets/images/products/image-1.png' alt='' width='200px' height='150px'>")
+		 $("#harga2").val(60000)
+	 }
+	 else if (gambar == 24)
+	 {
+		 $('#gambar').html("<img src='assets/images/gallery/butterheadlettuce.jpeg' alt='' width='200px' height='150px'>")
+		 $("#harga2").val(100000)
+	 }
+	 else if (gambar == 25)
+	 {
+		 $('#gambar').html("<img src='assets/images/gallery/Salanova butterhead lettuce2.jpeg' alt='' width='200px' height='150px'>")
+		 $("#harga2").val(100000)
+	 }
+	 else if (gambar == 26)
+	 {
+		 $('#gambar').html("<img src='assets/images/gallery/SalanovaCrispyGreenLettuce.jpeg' alt='' width='200px' height='150px'>")
+		 $("#harga2").val(100000)
+	 }
+	 else if (gambar == 27)
+	 {
+		 $('#gambar').html("<img src='assets/images/gallery/FreshBasil.jpeg' alt='' width='200px' height='150px'>")
+		 $("#harga2").val(90000)
+	 }
+	 else if (gambar == 28)
+	 {
+		 $('#gambar').html("<img src='assets/images/gallery/cabe merah keriting.jpeg' alt='' width='200px' height='150px'>")
+		 $("#harga2").val(50000)
+	 }
+	 else if (gambar == 29)
+	 {
+		 $('#gambar').html("<img src='assets/images/products/image-1.png' alt='' width='200px' height='150px'>")
+		 $("#harga2").val(50000)
+	 }
+	 else if (gambar == 30)
+	 {
+		 $('#gambar').html("<img src='assets/images/products/image-5.png' alt='' width='200px' height='150px'>")
+		 $("#harga2").val(65000)
+	 }
+	 $("#judul").html(judul);
+	 $("#judul2").val(judul);
+	 $("#gambar2").val(gambar);
+	 $("#harga").html(harga);
+	 $("#catatan").val("");
+	 $("#qty").val(1);
+	 $("#myModal").modal('show');
+}
+        </script>
     </body>
 
 </html>

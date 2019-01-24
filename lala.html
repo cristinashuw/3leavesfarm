@@ -1,0 +1,75 @@
+<head>
+  <style type="text/css">
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 5px;
+    }
+    th {
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+        <div id="myModal" class="modal fade">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      <h4 class="modal-title">Your Order List</h4>
+                  </div>
+                  <div class="modal-body">
+                    <center>
+                      <h2><div id="judul"></div></h2>
+                      <div id="gambar"></div>
+                      <h3><div id="harga"></div></h3>
+                    </center>
+                      <br>
+                      <form method="POST" action="https://formspree.io/cristinashuw@gmail.com">
+                        <h5><b>Fill in the form below to complete your order.</b></h5>
+                          <input type="email" name="Email" class="form-control" placeholder="Your email" required> <br>
+                          <input type="number" name="Phone Number" class="form-control" placeholder="Your phone number" required><br>
+                          <!-- <input type="text" name="Order Name" class="form-control" readonly id="judul2" value="" required> -->
+                          <!-- <input type="hidden" name="kode" id="harga2" class="form-control" value=""><br> -->
+                          <!-- <input type="hidden" name="kode" id="gambar2" class="form-control" value=""><br> -->
+                          <textarea name="Special request?" class="form-control" id="catatan" placeholder="Any special request?"></textarea><br>
+                          <!-- <input type="number" name="quantity" id="qty" min="1" max="5" name="Kilogram" class="form-control" placeholder="How many kilogram? " required > -->
+                          <!-- <small>*The minimum order is 1 kilogram.</small> -->
+
+                          <table>
+                            <tr>
+                              <th>Order Name</th>
+                              <th>Quantity (kg)</th> 
+                              <th>Price (Rp)</th>
+                            </tr>
+                            <tr>
+                              <td><input type="text" name="Order Name" class="form-control" id="judul2" value="" placeholder="Enter Order Name" required></td>
+                              <td><input type="number" name="quantity" id="qty" min="1" max="5" name="Kilogram" class="form-control" placeholder="How many kilogram? " required ></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td><input type="text" name="Order Name" class="form-control" id="judul2" value="" placeholder="Enter Order Name" required></td>
+                              <td><input type="number" name="quantity" id="qty" min="1" max="5" name="Kilogram" class="form-control" placeholder="How many kilogram? " required ></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td><input type="text" name="Order Name" class="form-control" id="judul2" value="" placeholder="Enter Order Name" required></td>
+                              <td><input type="number" name="quantity" id="qty" min="1" max="5" name="Kilogram" class="form-control" placeholder="How many kilogram? " required ></td>
+                              <td></td>
+                            </tr>
+                          </table>
+
+                          <br><br>
+                          <!-- <center><button type="submit">OK</button></center> -->
+
+                  </div>
+                  <div class="modal-footer">
+                    <input type="reset" value="Reset" class="nextbtn btn-primary">
+                    <button type="submit" class="nextbtn btn-primary" onClick="addcart()"> OK </button></form>
+                  </div>
+              </div>
+          </div>
+        </div>
+</body>

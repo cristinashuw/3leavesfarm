@@ -1970,13 +1970,27 @@ a:focus {
   color: #2a2a2a;
 }
 .wrap {
-  overflow: hidden;
-  margin: auto;
+	vertical-align:middle;
+  margin:auto;
+  overflow:hidden;
+  width:1150px;
+ 
 }
-.wrap .box-hidden {
+@media only screen and (max-width: 56.25em) {
+    .wrap {
+        width:450px;
+    }
+}
+@media only screen and (max-width: 75em) {
+    .wrap {
+        width:850px;
+    }
+}
+.box-hidden {
   display: none;
 }
 .wrap .box {
-  float: left;
-  color: white;
+	padding:30px;
+	float:left;
+	margin:10px;
 }

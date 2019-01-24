@@ -438,13 +438,13 @@
     vertical-align: top;
 }
 
-.gallery-grid {
+.gallery-gridd {
     font-size: 0;
 
     margin: -15px;
 }
 
-.gallery-grid .fancybox {
+.gallery-gridd .fancybox {
     position: absolute;
     z-index: 4;
     top: 0;
@@ -454,7 +454,7 @@
     height: 100%;
 }
 
-.gallery-grid .grid-item {
+.gallery-gridd .grid-item {
     display: inline-block;
     overflow: hidden;
 

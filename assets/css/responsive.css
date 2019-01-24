@@ -488,7 +488,7 @@
     .grid-block-1 .block-right .grid-item:first-child {
         margin-top: 30px;
     }
-    .gallery-grid .grid-item {
+    .gallery-gridd .grid-item {
         width: 50%;
     }
     .block-2 .block-image {
@@ -1072,7 +1072,7 @@
     .subscribe-email .subscribe-email-wrapper {
         padding: 30px 15px;
     }
-    .gallery-grid .grid-item {
+    .gallery-gridd .grid-item {
         width: 100%;
     }
     .footer-wrapper .col-2 .col-md-3 {

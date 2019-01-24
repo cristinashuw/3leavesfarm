@@ -183,7 +183,7 @@ jQuery(function($) {
                 var $grid = $('.gallery-grid').isotope({
                     itemSelector: '.grid-item',
                     layoutMode: 'masonry',
-                    percentPosition: true,
+                    percentPosition: false,
                     masonry: {
                         columnWidth: '.grid-item'
                     }
@@ -688,5 +688,4 @@ jQuery(function($) {
     $(window).on('load', function() {
         //gamba.loading();
     });
-
 });
